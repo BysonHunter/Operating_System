@@ -15,9 +15,8 @@
 ## Состав репозитория
 
 - каталогов: **30**;
-- файлов: **106**;
-- учебных документов: **22**;
-- изображений и схем: **82**.
+- файлов: **24**;
+- учебных документов: **22**.
 
 ## Структура каталогов
 
@@ -44,105 +43,23 @@ Operating_System/
 │   ├── Лекции/
 │   │   ├── Lection 1/
 │   │   │   ├── figures/
-│   │   │   │   ├── figure_01_os_roles.png
-│   │   │   │   ├── figure_02_layered_model.png
-│   │   │   │   ├── figure_03_privilege_boundary.png
-│   │   │   │   ├── figure_04_os_evolution.png
-│   │   │   │   ├── figure_05_classification.png
-│   │   │   │   ├── figure_06_security_properties.png
-│   │   │   │   ├── figure_07_policy_mechanism.png
-│   │   │   │   ├── figure_08_tcb.png
-│   │   │   │   ├── figure_09_controlled_access.png
-│   │   │   │   ├── figure_10_attack_surface.png
-│   │   │   │   ├── figure_11_risk_chain.png
-│   │   │   │   ├── figure_12_analysis_chain.png
-│   │   │   │   ├── figure_13_baseline.png
-│   │   │   │   ├── figure_14_security_cycle.png
-│   │   │   │   ├── figure_15_training_stand.png
-│   │   │   │   ├── figure_16_stand_model.png
-│   │   │   │   └── figure_17_verification_modes.png
 │   │   │   └── Конспект_лекции_1_ОС_как_объект_защиты.md
 │   │   ├── lecture_2_os_architecture/
 │   │   │   ├── figures/
-│   │   │   │   ├── figure_01_kernel_role.png
-│   │   │   │   ├── figure_02_privilege_boundary.png
-│   │   │   │   ├── figure_03_mmu_memory_protection.png
-│   │   │   │   ├── figure_04_kernel_entry_reasons.png
-│   │   │   │   ├── figure_05_syscall_contract.png
-│   │   │   │   ├── figure_06_api_abi.png
-│   │   │   │   ├── figure_07_syscall_classes.png
-│   │   │   │   ├── figure_08_descriptors.png
-│   │   │   │   ├── figure_09_untrusted_user_data.png
-│   │   │   │   ├── figure_10_toctou.png
-│   │   │   │   ├── figure_11_monolithic_kernel.png
-│   │   │   │   ├── figure_12_microkernel.png
-│   │   │   │   ├── figure_13_architecture_comparison.png
-│   │   │   │   ├── figure_14_interrupts_drivers.png
-│   │   │   │   ├── figure_15_interrupt_handling.png
-│   │   │   │   ├── figure_16_iommu.png
-│   │   │   │   └── figure_17_open_read_path.png
 │   │   │   └── Конспект_лекции_2_Архитектуры_ОС_и_системные_вызовы.md
 │   │   ├── lecture_3_processes_threads_scheduling/
 │   │   │   ├── figures/
-│   │   │   │   ├── figure_01_program_process_thread.png
-│   │   │   │   ├── figure_02_pcb.png
-│   │   │   │   ├── figure_03_address_space.png
-│   │   │   │   ├── figure_04_process_states.png
-│   │   │   │   ├── figure_05_process_lifecycle.png
-│   │   │   │   ├── figure_06_thread_model.png
-│   │   │   │   ├── figure_07_thread_mapping.png
-│   │   │   │   ├── figure_08_race_condition.png
-│   │   │   │   ├── figure_09_process_thread_boundary.png
-│   │   │   │   ├── figure_10_context_switch.png
-│   │   │   │   ├── figure_11_round_robin.png
-│   │   │   │   ├── figure_12_priority_inversion.png
-│   │   │   │   ├── figure_13_multicore_scheduling.png
-│   │   │   │   ├── figure_14_realtime_scheduling.png
-│   │   │   │   ├── figure_15_security_context.png
-│   │   │   │   ├── figure_16_isolation_layers.png
-│   │   │   │   ├── figure_17_secure_service.png
-│   │   │   │   └── figure_18_isolation_tests.png
 │   │   │   └── Конспект_лекции_3_Процессы_потоки_и_планирование.md
 │   │   └── OS-lecture-notes.md
 │   ├── Практики/
 │   │   ├── lab01-os-isolated-stand/
 │   │   │   ├── images/
-│   │   │   │   ├── figure-01.png
-│   │   │   │   ├── figure-02.png
-│   │   │   │   ├── figure-03.png
-│   │   │   │   ├── figure-04.png
-│   │   │   │   ├── figure-05.png
-│   │   │   │   ├── figure-06.png
-│   │   │   │   ├── figure-07.png
-│   │   │   │   ├── figure-08.png
-│   │   │   │   ├── figure-09.png
-│   │   │   │   └── figure-10.png
 │   │   │   └── Lab1.md
 │   │   ├── lab02-os-inventory-baseline/
 │   │   │   ├── images/
-│   │   │   │   ├── figure-01.png
-│   │   │   │   ├── figure-02.png
-│   │   │   │   ├── figure-03.png
-│   │   │   │   ├── figure-04.png
-│   │   │   │   ├── figure-05.png
-│   │   │   │   ├── figure-06.png
-│   │   │   │   ├── figure-07.png
-│   │   │   │   ├── figure-08.png
-│   │   │   │   ├── figure-09.png
-│   │   │   │   └── figure-10.png
 │   │   │   └── Lab2.md
 │   │   ├── lab03-processes-syscalls-fd/
 │   │   │   ├── images/
-│   │   │   │   ├── figure-01.png
-│   │   │   │   ├── figure-02.png
-│   │   │   │   ├── figure-03.png
-│   │   │   │   ├── figure-04.png
-│   │   │   │   ├── figure-05.png
-│   │   │   │   ├── figure-06.png
-│   │   │   │   ├── figure-07.png
-│   │   │   │   ├── figure-08.png
-│   │   │   │   ├── figure-09.png
-│   │   │   │   └── figure-10.png
 │   │   │   └── Lab03.md
 │   │   └── readme.md
 │   ├── РПД и ФОС/
@@ -423,145 +340,27 @@ Operating_System/
 
 ### КБ/Лекции/Lection 1/figures
 
-<details>
-<summary>Изображения: 17</summary>
-
-| Файл | Содержание | Формат |
-|---|---|---|
-| [figure_01_os_roles.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_01_os_roles.png) | figure 01 os roles | PNG |
-| [figure_02_layered_model.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_02_layered_model.png) | figure 02 layered model | PNG |
-| [figure_03_privilege_boundary.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_03_privilege_boundary.png) | figure 03 privilege boundary | PNG |
-| [figure_04_os_evolution.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_04_os_evolution.png) | figure 04 os evolution | PNG |
-| [figure_05_classification.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_05_classification.png) | figure 05 classification | PNG |
-| [figure_06_security_properties.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_06_security_properties.png) | figure 06 security properties | PNG |
-| [figure_07_policy_mechanism.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_07_policy_mechanism.png) | figure 07 policy mechanism | PNG |
-| [figure_08_tcb.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_08_tcb.png) | figure 08 tcb | PNG |
-| [figure_09_controlled_access.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_09_controlled_access.png) | figure 09 controlled access | PNG |
-| [figure_10_attack_surface.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_10_attack_surface.png) | figure 10 attack surface | PNG |
-| [figure_11_risk_chain.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_11_risk_chain.png) | figure 11 risk chain | PNG |
-| [figure_12_analysis_chain.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_12_analysis_chain.png) | figure 12 analysis chain | PNG |
-| [figure_13_baseline.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_13_baseline.png) | figure 13 baseline | PNG |
-| [figure_14_security_cycle.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_14_security_cycle.png) | figure 14 security cycle | PNG |
-| [figure_15_training_stand.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_15_training_stand.png) | figure 15 training stand | PNG |
-| [figure_16_stand_model.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_16_stand_model.png) | figure 16 stand model | PNG |
-| [figure_17_verification_modes.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201/figures/figure_17_verification_modes.png) | figure 17 verification modes | PNG |
-
-</details>
+Каталог пока не содержит материалов.
 
 ### КБ/Лекции/lecture_2_os_architecture/figures
 
-<details>
-<summary>Изображения: 17</summary>
-
-| Файл | Содержание | Формат |
-|---|---|---|
-| [figure_01_kernel_role.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_01_kernel_role.png) | figure 01 kernel role | PNG |
-| [figure_02_privilege_boundary.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_02_privilege_boundary.png) | figure 02 privilege boundary | PNG |
-| [figure_03_mmu_memory_protection.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_03_mmu_memory_protection.png) | figure 03 mmu memory protection | PNG |
-| [figure_04_kernel_entry_reasons.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_04_kernel_entry_reasons.png) | figure 04 kernel entry reasons | PNG |
-| [figure_05_syscall_contract.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_05_syscall_contract.png) | figure 05 syscall contract | PNG |
-| [figure_06_api_abi.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_06_api_abi.png) | figure 06 api abi | PNG |
-| [figure_07_syscall_classes.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_07_syscall_classes.png) | figure 07 syscall classes | PNG |
-| [figure_08_descriptors.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_08_descriptors.png) | figure 08 descriptors | PNG |
-| [figure_09_untrusted_user_data.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_09_untrusted_user_data.png) | figure 09 untrusted user data | PNG |
-| [figure_10_toctou.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_10_toctou.png) | figure 10 toctou | PNG |
-| [figure_11_monolithic_kernel.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_11_monolithic_kernel.png) | figure 11 monolithic kernel | PNG |
-| [figure_12_microkernel.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_12_microkernel.png) | figure 12 microkernel | PNG |
-| [figure_13_architecture_comparison.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_13_architecture_comparison.png) | figure 13 architecture comparison | PNG |
-| [figure_14_interrupts_drivers.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_14_interrupts_drivers.png) | figure 14 interrupts drivers | PNG |
-| [figure_15_interrupt_handling.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_15_interrupt_handling.png) | figure 15 interrupt handling | PNG |
-| [figure_16_iommu.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_16_iommu.png) | figure 16 iommu | PNG |
-| [figure_17_open_read_path.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture/figures/figure_17_open_read_path.png) | figure 17 open read path | PNG |
-
-</details>
+Каталог пока не содержит материалов.
 
 ### КБ/Лекции/lecture_3_processes_threads_scheduling/figures
 
-<details>
-<summary>Изображения: 18</summary>
-
-| Файл | Содержание | Формат |
-|---|---|---|
-| [figure_01_program_process_thread.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_01_program_process_thread.png) | figure 01 program process thread | PNG |
-| [figure_02_pcb.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_02_pcb.png) | figure 02 pcb | PNG |
-| [figure_03_address_space.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_03_address_space.png) | figure 03 address space | PNG |
-| [figure_04_process_states.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_04_process_states.png) | figure 04 process states | PNG |
-| [figure_05_process_lifecycle.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_05_process_lifecycle.png) | figure 05 process lifecycle | PNG |
-| [figure_06_thread_model.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_06_thread_model.png) | figure 06 thread model | PNG |
-| [figure_07_thread_mapping.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_07_thread_mapping.png) | figure 07 thread mapping | PNG |
-| [figure_08_race_condition.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_08_race_condition.png) | figure 08 race condition | PNG |
-| [figure_09_process_thread_boundary.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_09_process_thread_boundary.png) | figure 09 process thread boundary | PNG |
-| [figure_10_context_switch.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_10_context_switch.png) | figure 10 context switch | PNG |
-| [figure_11_round_robin.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_11_round_robin.png) | figure 11 round robin | PNG |
-| [figure_12_priority_inversion.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_12_priority_inversion.png) | figure 12 priority inversion | PNG |
-| [figure_13_multicore_scheduling.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_13_multicore_scheduling.png) | figure 13 multicore scheduling | PNG |
-| [figure_14_realtime_scheduling.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_14_realtime_scheduling.png) | figure 14 realtime scheduling | PNG |
-| [figure_15_security_context.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_15_security_context.png) | figure 15 security context | PNG |
-| [figure_16_isolation_layers.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_16_isolation_layers.png) | figure 16 isolation layers | PNG |
-| [figure_17_secure_service.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_17_secure_service.png) | figure 17 secure service | PNG |
-| [figure_18_isolation_tests.png](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/figures/figure_18_isolation_tests.png) | figure 18 isolation tests | PNG |
-
-</details>
+Каталог пока не содержит материалов.
 
 ### КБ/Практики/lab01-os-isolated-stand/images
 
-<details>
-<summary>Изображения: 10</summary>
-
-| Файл | Содержание | Формат |
-|---|---|---|
-| [figure-01.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-01.png) | figure 01 | PNG |
-| [figure-02.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-02.png) | figure 02 | PNG |
-| [figure-03.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-03.png) | figure 03 | PNG |
-| [figure-04.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-04.png) | figure 04 | PNG |
-| [figure-05.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-05.png) | figure 05 | PNG |
-| [figure-06.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-06.png) | figure 06 | PNG |
-| [figure-07.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-07.png) | figure 07 | PNG |
-| [figure-08.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-08.png) | figure 08 | PNG |
-| [figure-09.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-09.png) | figure 09 | PNG |
-| [figure-10.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand/images/figure-10.png) | figure 10 | PNG |
-
-</details>
+Каталог пока не содержит материалов.
 
 ### КБ/Практики/lab02-os-inventory-baseline/images
 
-<details>
-<summary>Изображения: 10</summary>
-
-| Файл | Содержание | Формат |
-|---|---|---|
-| [figure-01.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-01.png) | figure 01 | PNG |
-| [figure-02.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-02.png) | figure 02 | PNG |
-| [figure-03.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-03.png) | figure 03 | PNG |
-| [figure-04.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-04.png) | figure 04 | PNG |
-| [figure-05.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-05.png) | figure 05 | PNG |
-| [figure-06.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-06.png) | figure 06 | PNG |
-| [figure-07.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-07.png) | figure 07 | PNG |
-| [figure-08.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-08.png) | figure 08 | PNG |
-| [figure-09.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-09.png) | figure 09 | PNG |
-| [figure-10.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline/images/figure-10.png) | figure 10 | PNG |
-
-</details>
+Каталог пока не содержит материалов.
 
 ### КБ/Практики/lab03-processes-syscalls-fd/images
 
-<details>
-<summary>Изображения: 10</summary>
-
-| Файл | Содержание | Формат |
-|---|---|---|
-| [figure-01.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-01.png) | figure 01 | PNG |
-| [figure-02.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-02.png) | figure 02 | PNG |
-| [figure-03.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-03.png) | figure 03 | PNG |
-| [figure-04.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-04.png) | figure 04 | PNG |
-| [figure-05.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-05.png) | figure 05 | PNG |
-| [figure-06.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-06.png) | figure 06 | PNG |
-| [figure-07.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-07.png) | figure 07 | PNG |
-| [figure-08.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-08.png) | figure 08 | PNG |
-| [figure-09.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-09.png) | figure 09 | PNG |
-| [figure-10.png](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/images/figure-10.png) | figure 10 | PNG |
-
-</details>
+Каталог пока не содержит материалов.
 
 ## Как обновляется этот файл
 
