@@ -45,7 +45,7 @@ DOCUMENT_EXTENSIONS = {
     ".txt",
 }
 
-IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
+IGNORED_IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
 
 FORMAT_LABELS = {
     ".md": "Markdown",
@@ -58,12 +58,6 @@ FORMAT_LABELS = {
     ".xlsx": "Excel",
     ".csv": "CSV",
     ".txt": "Текст",
-    ".png": "PNG",
-    ".jpg": "JPEG",
-    ".jpeg": "JPEG",
-    ".gif": "GIF",
-    ".svg": "SVG",
-    ".webp": "WebP",
     ".py": "Python",
     ".yml": "YAML",
     ".yaml": "YAML",
@@ -76,6 +70,8 @@ def sort_key(path: Path) -> tuple[str, str]:
 
 def is_excluded(path: Path) -> bool:
     if path in EXCLUDED_FILES:
+        return True
+    if path.is_file() and path.suffix.casefold() in IGNORED_IMAGE_EXTENSIONS:
         return True
     return any(part in EXCLUDED_DIRS for part in path.relative_to(ROOT).parts)
 
@@ -157,7 +153,7 @@ def format_label(path: Path) -> str:
     return FORMAT_LABELS.get(path.suffix.casefold(), path.suffix.lstrip(".").upper() or "Файл")
 
 
-def count_repository() -> tuple[int, int, int, int]:
+def count_repository() -> tuple[int, int, int]:
     dirs = [path for path in directories() if path != ROOT]
     files = [
         path
@@ -165,8 +161,7 @@ def count_repository() -> tuple[int, int, int, int]:
         if path.is_file() and not is_excluded(path)
     ]
     documents = sum(path.suffix.casefold() in DOCUMENT_EXTENSIONS for path in files)
-    images = sum(path.suffix.casefold() in IMAGE_EXTENSIONS for path in files)
-    return len(dirs), len(files), documents, images
+    return len(dirs), len(files), documents
 
 
 def tree_lines(directory: Path, prefix: str = "") -> list[str]:
@@ -211,24 +206,9 @@ def render_directory_section(directory: Path) -> list[str]:
         lines.append("")
 
     if items:
-        image_items = [item for item in items if item.suffix.casefold() in IMAGE_EXTENSIONS]
-        regular_items = [item for item in items if item not in image_items]
-
-        if regular_items:
-            lines.extend(["**Файлы**", ""])
-            lines.extend(render_file_table(regular_items))
-            lines.append("")
-
-        if image_items:
-            lines.extend(
-                [
-                    f"<details>",
-                    f"<summary>Изображения: {len(image_items)}</summary>",
-                    "",
-                ]
-            )
-            lines.extend(render_file_table(image_items))
-            lines.extend(["", "</details>", ""])
+        lines.extend(["**Файлы**", ""])
+        lines.extend(render_file_table(items))
+        lines.append("")
 
     if not children and not items:
         lines.extend(["Каталог пока не содержит материалов.", ""])
@@ -237,7 +217,7 @@ def render_directory_section(directory: Path) -> list[str]:
 
 
 def generate() -> str:
-    directory_count, file_count, document_count, image_count = count_repository()
+    directory_count, file_count, document_count = count_repository()
     top_level = [
         path
         for path in subdirectories_in(ROOT)
@@ -268,8 +248,7 @@ def generate() -> str:
             "",
             f"- каталогов: **{directory_count}**;",
             f"- файлов: **{file_count}**;",
-            f"- учебных документов: **{document_count}**;",
-            f"- изображений и схем: **{image_count}**.",
+            f"- учебных документов: **{document_count}**.",
             "",
             "## Структура каталогов",
             "",
