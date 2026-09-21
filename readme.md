@@ -14,9 +14,9 @@
 
 ## Состав репозитория
 
-- каталогов: **30**;
-- файлов: **24**;
-- учебных документов: **22**.
+- каталогов: **32**;
+- файлов: **25**;
+- учебных документов: **23**.
 
 ## Структура каталогов
 
@@ -50,6 +50,9 @@ Operating_System/
 │   │   ├── lecture_3_processes_threads_scheduling/
 │   │   │   ├── figures/
 │   │   │   └── Лекция_3_Процессы_потоки_и_управление_процессами.md
+│   │   ├── lecture_4_IPC/
+│   │   │   ├── images/
+│   │   │   └── Лекция_4_IPC.md
 │   │   └── OS-lecture-notes.md
 │   ├── Практики/
 │   │   ├── lab01-os-isolated-stand/
@@ -204,6 +207,7 @@ Operating_System/
 - [Lection 1](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/Lection%201) — Материалы раздела; `КБ/Лекции/Lection 1/`
 - [lecture_2_os_architecture](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture) — Материалы раздела; `КБ/Лекции/lecture_2_os_architecture/`
 - [lecture_3_processes_threads_scheduling](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling) — Материалы раздела; `КБ/Лекции/lecture_3_processes_threads_scheduling/`
+- [lecture_4_IPC](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_4_IPC) — Материалы раздела; `КБ/Лекции/lecture_4_IPC/`
 
 **Файлы**
 
@@ -302,6 +306,18 @@ Operating_System/
 |---|---|---|
 | [Лекция_3_Процессы_потоки_и_управление_процессами.md](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_3_%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%B8_%D0%B8_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0%D0%BC%D0%B8.md) | Лекция 3. Процессы, потоки и управление процессами | Markdown |
 
+### КБ/Лекции/lecture_4_IPC
+
+**Подкаталоги**
+
+- [images](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_4_IPC/images) — Материалы раздела; `КБ/Лекции/lecture_4_IPC/images/`
+
+**Файлы**
+
+| Файл | Содержание | Формат |
+|---|---|---|
+| [Лекция_4_IPC.md](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_4_IPC/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_4_IPC.md) | Лекция 4. Синхронизация процессов и межпроцессное взаимодействие | Markdown |
+
 ### КБ/Практики/lab01-os-isolated-stand
 
 **Подкаталоги**
@@ -347,6 +363,10 @@ Operating_System/
 Каталог пока не содержит материалов.
 
 ### КБ/Лекции/lecture_3_processes_threads_scheduling/figures
+
+Каталог пока не содержит материалов.
+
+### КБ/Лекции/lecture_4_IPC/images
 
 Каталог пока не содержит материалов.
 
