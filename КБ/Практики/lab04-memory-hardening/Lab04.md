@@ -618,8 +618,6 @@ sha256sum -c SHA256SUMS | tee sha256_check.txt
 
 ### Шаг 12. Создайте точку завершения
 
-После проверки преподавателем:
-
 1. сохраните каталог `~/oslab/lab04` способом, установленным для группы;
 2. создайте snapshot `lab04-hardened-VNN`, если это указано преподавателем;
 3. не удаляйте `clean-VNN`;
@@ -774,5 +772,5 @@ sha256sum -c SHA256SUMS | tee sha256_check.txt
 4. [GNU GCC: Instrumentation Options](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html)
 5. [GNU GCC: Link Options](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html)
 6. [GNU Binutils: `readelf`](https://sourceware.org/binutils/docs/binutils/readelf.html)
-7. Документация Astra Linux, поставляемая с используемой в учебном стенде редакцией.
+7. Документация Astra Linux.
 
