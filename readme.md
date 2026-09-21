@@ -14,9 +14,9 @@
 
 ## Состав репозитория
 
-- каталогов: **32**;
-- файлов: **25**;
-- учебных документов: **23**.
+- каталогов: **33**;
+- файлов: **26**;
+- учебных документов: **24**.
 
 ## Структура каталогов
 
@@ -64,6 +64,8 @@ Operating_System/
 │   │   ├── lab03-processes-syscalls-fd/
 │   │   │   ├── images/
 │   │   │   └── Lab03.md
+│   │   ├── lab04-memory-hardening/
+│   │   │   └── Lab04.md
 │   │   └── readme.md
 │   ├── РПД и ФОС/
 │   │   ├── readme.md
@@ -222,6 +224,7 @@ Operating_System/
 - [lab01-os-isolated-stand](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab01-os-isolated-stand) — Материалы раздела; `КБ/Практики/lab01-os-isolated-stand/`
 - [lab02-os-inventory-baseline](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline) — Материалы раздела; `КБ/Практики/lab02-os-inventory-baseline/`
 - [lab03-processes-syscalls-fd](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd) — Материалы раздела; `КБ/Практики/lab03-processes-syscalls-fd/`
+- [lab04-memory-hardening](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab04-memory-hardening) — Материалы раздела; `КБ/Практики/lab04-memory-hardening/`
 
 **Файлы**
 
@@ -353,6 +356,14 @@ Operating_System/
 | Файл | Содержание | Формат |
 |---|---|---|
 | [Lab03.md](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd/Lab03.md) | Практическая работа № 3. Процессы, системные вызовы и файловые дескрипторы | Markdown |
+
+### КБ/Практики/lab04-memory-hardening
+
+**Файлы**
+
+| Файл | Содержание | Формат |
+|---|---|---|
+| [Lab04.md](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab04-memory-hardening/Lab04.md) | Практическая работа № 4. Защита памяти и безопасные параметры ядра | Markdown |
 
 ### КБ/Лекции/Lection 1/figures
 
