@@ -14,9 +14,9 @@
 
 ## Состав репозитория
 
-- каталогов: **33**;
-- файлов: **26**;
-- учебных документов: **24**.
+- каталогов: **35**;
+- файлов: **27**;
+- учебных документов: **25**.
 
 ## Структура каталогов
 
@@ -53,6 +53,9 @@ Operating_System/
 │   │   ├── lecture_4_IPC/
 │   │   │   ├── images/
 │   │   │   └── Лекция_4_IPC.md
+│   │   ├── lecture_5_Memory_managment/
+│   │   │   ├── images/
+│   │   │   └── Лекция_5_Управление_памятью.md
 │   │   └── OS-lecture-notes.md
 │   ├── Практики/
 │   │   ├── lab01-os-isolated-stand/
@@ -210,6 +213,7 @@ Operating_System/
 - [lecture_2_os_architecture](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_2_os_architecture) — Материалы раздела; `КБ/Лекции/lecture_2_os_architecture/`
 - [lecture_3_processes_threads_scheduling](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling) — Материалы раздела; `КБ/Лекции/lecture_3_processes_threads_scheduling/`
 - [lecture_4_IPC](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_4_IPC) — Материалы раздела; `КБ/Лекции/lecture_4_IPC/`
+- [lecture_5_Memory_managment](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_5_Memory_managment) — Материалы раздела; `КБ/Лекции/lecture_5_Memory_managment/`
 
 **Файлы**
 
@@ -321,6 +325,18 @@ Operating_System/
 |---|---|---|
 | [Лекция_4_IPC.md](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_4_IPC/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_4_IPC.md) | Лекция 4. Синхронизация процессов и межпроцессное взаимодействие | Markdown |
 
+### КБ/Лекции/lecture_5_Memory_managment
+
+**Подкаталоги**
+
+- [images](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_5_Memory_managment/images) — Материалы раздела; `КБ/Лекции/lecture_5_Memory_managment/images/`
+
+**Файлы**
+
+| Файл | Содержание | Формат |
+|---|---|---|
+| [Лекция_5_Управление_памятью.md](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_5_Memory_managment/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_5_%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C%D1%8E.md) | Лекция 5. Управление памятью и противодействие эксплуатации | Markdown |
+
 ### КБ/Практики/lab01-os-isolated-stand
 
 **Подкаталоги**
@@ -378,6 +394,10 @@ Operating_System/
 Каталог пока не содержит материалов.
 
 ### КБ/Лекции/lecture_4_IPC/images
+
+Каталог пока не содержит материалов.
+
+### КБ/Лекции/lecture_5_Memory_managment/images
 
 Каталог пока не содержит материалов.
 
