@@ -14,9 +14,9 @@
 
 ## Состав репозитория
 
-- каталогов: **35**;
-- файлов: **27**;
-- учебных документов: **25**.
+- каталогов: **36**;
+- файлов: **28**;
+- учебных документов: **26**.
 
 ## Структура каталогов
 
@@ -69,6 +69,8 @@ Operating_System/
 │   │   │   └── Lab03.md
 │   │   ├── lab04-memory-hardening/
 │   │   │   └── Lab04.md
+│   │   ├── lab05_ACL/
+│   │   │   └── Практическая_работа_5_Права_ACL_AIDE.md
 │   │   └── readme.md
 │   ├── РПД и ФОС/
 │   │   ├── readme.md
@@ -229,6 +231,7 @@ Operating_System/
 - [lab02-os-inventory-baseline](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab02-os-inventory-baseline) — Материалы раздела; `КБ/Практики/lab02-os-inventory-baseline/`
 - [lab03-processes-syscalls-fd](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd) — Материалы раздела; `КБ/Практики/lab03-processes-syscalls-fd/`
 - [lab04-memory-hardening](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab04-memory-hardening) — Материалы раздела; `КБ/Практики/lab04-memory-hardening/`
+- [lab05_ACL](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab05_ACL) — Материалы раздела; `КБ/Практики/lab05_ACL/`
 
 **Файлы**
 
@@ -380,6 +383,14 @@ Operating_System/
 | Файл | Содержание | Формат |
 |---|---|---|
 | [Lab04.md](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab04-memory-hardening/Lab04.md) | Практическая работа № 4. Защита памяти и безопасные параметры ядра | Markdown |
+
+### КБ/Практики/lab05_ACL
+
+**Файлы**
+
+| Файл | Содержание | Формат |
+|---|---|---|
+| [Практическая_работа_5_Права_ACL_AIDE.md](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab05_ACL/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_5_%D0%9F%D1%80%D0%B0%D0%B2%D0%B0_ACL_AIDE.md) | Практическая работа № 5. Права доступа ACL и контроль целостности | Markdown |
 
 ### КБ/Лекции/Lection 1/figures
 
