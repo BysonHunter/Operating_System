@@ -14,9 +14,9 @@
 
 ## Состав репозитория
 
-- каталогов: **36**;
-- файлов: **28**;
-- учебных документов: **26**.
+- каталогов: **39**;
+- файлов: **30**;
+- учебных документов: **28**.
 
 ## Структура каталогов
 
@@ -56,6 +56,9 @@ Operating_System/
 │   │   ├── lecture_5_Memory_managment/
 │   │   │   ├── images/
 │   │   │   └── Лекция_5_Управление_памятью.md
+│   │   ├── lecture_6_File_systems/
+│   │   │   ├── images/
+│   │   │   └── Лекция_6_Файловые_системы_и_хранение_данных.md
 │   │   └── OS-lecture-notes.md
 │   ├── Практики/
 │   │   ├── lab01-os-isolated-stand/
@@ -71,6 +74,8 @@ Operating_System/
 │   │   │   └── Lab04.md
 │   │   ├── lab05_ACL/
 │   │   │   └── Практическая_работа_5_Права_ACL_AIDE.md
+│   │   ├── lab06_Autentification/
+│   │   │   └── Практическая_6_Аутентификация.md
 │   │   └── readme.md
 │   ├── РПД и ФОС/
 │   │   ├── readme.md
@@ -216,6 +221,7 @@ Operating_System/
 - [lecture_3_processes_threads_scheduling](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_3_processes_threads_scheduling) — Материалы раздела; `КБ/Лекции/lecture_3_processes_threads_scheduling/`
 - [lecture_4_IPC](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_4_IPC) — Материалы раздела; `КБ/Лекции/lecture_4_IPC/`
 - [lecture_5_Memory_managment](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_5_Memory_managment) — Материалы раздела; `КБ/Лекции/lecture_5_Memory_managment/`
+- [lecture_6_File_systems](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_6_File_systems) — Материалы раздела; `КБ/Лекции/lecture_6_File_systems/`
 
 **Файлы**
 
@@ -232,6 +238,7 @@ Operating_System/
 - [lab03-processes-syscalls-fd](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab03-processes-syscalls-fd) — Материалы раздела; `КБ/Практики/lab03-processes-syscalls-fd/`
 - [lab04-memory-hardening](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab04-memory-hardening) — Материалы раздела; `КБ/Практики/lab04-memory-hardening/`
 - [lab05_ACL](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab05_ACL) — Материалы раздела; `КБ/Практики/lab05_ACL/`
+- [lab06_Autentification](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab06_Autentification) — Материалы раздела; `КБ/Практики/lab06_Autentification/`
 
 **Файлы**
 
@@ -340,6 +347,18 @@ Operating_System/
 |---|---|---|
 | [Лекция_5_Управление_памятью.md](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_5_Memory_managment/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_5_%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C%D1%8E.md) | Лекция 5. Управление памятью и противодействие эксплуатации | Markdown |
 
+### КБ/Лекции/lecture_6_File_systems
+
+**Подкаталоги**
+
+- [images](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_6_File_systems/images) — Материалы раздела; `КБ/Лекции/lecture_6_File_systems/images/`
+
+**Файлы**
+
+| Файл | Содержание | Формат |
+|---|---|---|
+| [Лекция_6_Файловые_системы_и_хранение_данных.md](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_6_File_systems/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_6_%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B_%D0%B8_%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.md) | Лекция 6. Файловые системы и хранение данных | Markdown |
+
 ### КБ/Практики/lab01-os-isolated-stand
 
 **Подкаталоги**
@@ -392,6 +411,14 @@ Operating_System/
 |---|---|---|
 | [Практическая_работа_5_Права_ACL_AIDE.md](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab05_ACL/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_5_%D0%9F%D1%80%D0%B0%D0%B2%D0%B0_ACL_AIDE.md) | Практическая работа № 5. Права доступа ACL и контроль целостности | Markdown |
 
+### КБ/Практики/lab06_Autentification
+
+**Файлы**
+
+| Файл | Содержание | Формат |
+|---|---|---|
+| [Практическая_6_Аутентификация.md](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab06_Autentification/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_6_%D0%90%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F.md) | Практическая работа № 6. Аутентификация и парольная политика | Markdown |
+
 ### КБ/Лекции/Lection 1/figures
 
 Каталог пока не содержит материалов.
@@ -409,6 +436,10 @@ Operating_System/
 Каталог пока не содержит материалов.
 
 ### КБ/Лекции/lecture_5_Memory_managment/images
+
+Каталог пока не содержит материалов.
+
+### КБ/Лекции/lecture_6_File_systems/images
 
 Каталог пока не содержит материалов.
 
