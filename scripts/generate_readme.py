@@ -1,321 +1,180 @@
 #!/usr/bin/env python3
-"""Generate the root readme.md from the current repository contents."""
-
+"""Build the student-facing readme.md from the repository's teaching materials."""
 from __future__ import annotations
 
 import argparse
+import html
 import re
 import sys
 from pathlib import Path
 from urllib.parse import quote
 
-
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "readme.md"
-
-EXCLUDED_DIRS = {
-    ".git",
-    ".idea",
-    ".vscode",
-    "__pycache__",
-    ".pytest_cache",
+OUTPUT = ROOT / 'readme.md'
+DIRECTIONS = {
+    'КБ': '10.05.01 «Компьютерная безопасность»',
+    'ИВТ': '09.03.01 «Информатика и вычислительная техника»',
+    'ПИ': '09.03.04 «Программная инженерия»',
 }
-
-EXCLUDED_FILES = {
-    OUTPUT,
-    ROOT / ".DS_Store",
-}
-
-TOP_LEVEL_DESCRIPTIONS = {
-    "ИВТ": "09.03.01 «Информатика и вычислительная техника»",
-    "КБ": "10.05.01 «Компьютерная безопасность»",
-    "ПИ": "09.03.04 «Программная инженерия»",
-}
-
-DOCUMENT_EXTENSIONS = {
-    ".md",
-    ".pdf",
-    ".doc",
-    ".docx",
-    ".ppt",
-    ".pptx",
-    ".xls",
-    ".xlsx",
-    ".csv",
-    ".txt",
-}
-
-IGNORED_IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
-
-FORMAT_LABELS = {
-    ".md": "Markdown",
-    ".pdf": "PDF",
-    ".doc": "Word",
-    ".docx": "Word",
-    ".ppt": "PowerPoint",
-    ".pptx": "PowerPoint",
-    ".xls": "Excel",
-    ".xlsx": "Excel",
-    ".csv": "CSV",
-    ".txt": "Текст",
-    ".py": "Python",
-    ".yml": "YAML",
-    ".yaml": "YAML",
-}
-
-
-def sort_key(path: Path) -> tuple[str, str]:
-    return (path.name.casefold(), path.as_posix().casefold())
-
-
-def is_excluded(path: Path) -> bool:
-    if path in EXCLUDED_FILES:
-        return True
-    if path.is_file() and path.suffix.casefold() in IGNORED_IMAGE_EXTENSIONS:
-        return True
-    return any(part in EXCLUDED_DIRS for part in path.relative_to(ROOT).parts)
-
-
-def directories() -> list[Path]:
-    result = [ROOT]
-    result.extend(
-        sorted(
-            (path for path in ROOT.rglob("*") if path.is_dir() and not is_excluded(path)),
-            key=lambda path: (
-                len(path.relative_to(ROOT).parts),
-                path.relative_to(ROOT).as_posix().casefold(),
-            ),
-        )
-    )
-    return result
-
-
-def files_in(directory: Path) -> list[Path]:
-    return sorted(
-        (
-            path
-            for path in directory.iterdir()
-            if path.is_file() and not is_excluded(path)
-        ),
-        key=sort_key,
-    )
-
-
-def subdirectories_in(directory: Path) -> list[Path]:
-    return sorted(
-        (
-            path
-            for path in directory.iterdir()
-            if path.is_dir() and not is_excluded(path)
-        ),
-        key=sort_key,
-    )
+SECTIONS = {'Лекции': '📖', 'Практики': '🧪', 'КР': '📝', 'РПД и ФОС': '📋'}
+FORMATS = {'.md': 'Markdown', '.pdf': 'PDF', '.doc': 'Word', '.docx': 'Word',
+           '.ppt': 'PowerPoint', '.pptx': 'PowerPoint', '.xls': 'Excel',
+           '.xlsx': 'Excel', '.csv': 'CSV', '.txt': 'Текст', '.ipynb': 'Jupyter'}
+EXCLUDED_DIRS = {'.git', '.github', '.agents', 'scripts', '__pycache__',
+                 '.venv', 'venv', 'node_modules', '.idea', '.vscode', '.pytest_cache'}
 
 
 def relative_url(path: Path) -> str:
-    relative = path.relative_to(ROOT).as_posix()
-    return "./" + quote(relative, safe="/._-()")
+    return './' + quote(path.relative_to(ROOT).as_posix(), safe='/._-')
+
+
+def escape(text: str) -> str:
+    """Keep document headings safe inside Markdown tables and link labels."""
+    text = html.escape(re.sub(r'\s+', ' ', text), quote=False)
+    return re.sub(r'([\\`*\[\]|])', r'\\\1', text)
 
 
 def markdown_title(path: Path) -> str | None:
-    if path.suffix.casefold() != ".md":
+    if path.suffix.lower() != '.md':
         return None
-
-    try:
-        with path.open("r", encoding="utf-8-sig", errors="replace") as source:
-            in_fence = False
-            for index, line in enumerate(source):
-                if index >= 250:
-                    break
-                stripped = line.strip()
-                if stripped.startswith(("```", "~~~")):
-                    in_fence = not in_fence
-                    continue
-                if in_fence:
-                    continue
-                match = re.match(r"^#\s+(.+?)\s*$", stripped)
-                if match:
-                    return re.sub(r"\s+#+$", "", match.group(1)).strip()
-    except OSError:
-        return None
-
+    fence = None
+    with path.open(encoding='utf-8-sig', errors='replace') as source:
+        for index, line in enumerate(source):
+            if index >= 250:
+                break
+            stripped = line.strip()
+            marker = re.match(r'^(`{3,}|~{3,})', stripped)
+            if marker:
+                token = marker.group(1)
+                if fence is None:
+                    fence = token
+                elif token[0] == fence[0] and len(token) >= len(fence):
+                    fence = None
+                continue
+            if fence:
+                continue
+            heading = re.match(r'^#\s+(.+?)\s*$', stripped)
+            if heading:
+                return re.sub(r'\s+#+$', '', heading.group(1)).strip()
     return None
 
 
-def humanized_stem(path: Path) -> str:
-    title = markdown_title(path)
-    if title:
-        return title
-    return re.sub(r"[_-]+", " ", path.stem).strip() or path.name
+def title(path: Path) -> str:
+    return markdown_title(path) or re.sub(r'[_-]+', ' ', path.stem).strip()
 
 
-def format_label(path: Path) -> str:
-    return FORMAT_LABELS.get(path.suffix.casefold(), path.suffix.lstrip(".").upper() or "Файл")
+def natural_key(path: Path) -> list:
+    return [int(part) if part.isdigit() else part.casefold()
+            for part in re.split(r'(\d+)', path.relative_to(ROOT).as_posix())]
 
 
-def count_repository() -> tuple[int, int, int]:
-    dirs = [path for path in directories() if path != ROOT]
-    files = [
-        path
-        for path in ROOT.rglob("*")
-        if path.is_file() and not is_excluded(path)
-    ]
-    documents = sum(path.suffix.casefold() in DOCUMENT_EXTENSIONS for path in files)
-    return len(dirs), len(files), documents
+def documents(directory: Path) -> list[Path]:
+    if not directory.is_dir():
+        return []
+    return sorted((p for p in directory.rglob('*')
+                   if p.is_file() and p.suffix.lower() in FORMATS
+                   and p.name.casefold() != 'readme.md'
+                   and not any(part.startswith('.') or part in EXCLUDED_DIRS
+                               for part in p.relative_to(ROOT).parts)), key=natural_key)
 
 
-def tree_lines(directory: Path, prefix: str = "") -> list[str]:
-    children = subdirectories_in(directory) + files_in(directory)
-    lines: list[str] = []
-    for index, child in enumerate(children):
-        last = index == len(children) - 1
-        branch = "└── " if last else "├── "
-        label = child.name + ("/" if child.is_dir() else "")
-        lines.append(prefix + branch + label)
-        if child.is_dir():
-            extension = "    " if last else "│   "
-            lines.extend(tree_lines(child, prefix + extension))
-    return lines
-
-
-def render_file_table(items: list[Path]) -> list[str]:
-    lines = [
-        "| Файл | Содержание | Формат |",
-        "|---|---|---|",
-    ]
-    for path in items:
-        lines.append(
-            f"| [{path.name}]({relative_url(path)}) | {humanized_stem(path)} | {format_label(path)} |"
-        )
-    return lines
-
-
-def render_directory_section(directory: Path) -> list[str]:
-    relative = directory.relative_to(ROOT)
-    title = "Корень репозитория" if directory == ROOT else relative.as_posix()
-    children = subdirectories_in(directory)
-    items = files_in(directory)
-    lines = [f"### {title}", ""]
-
-    if children:
-        lines.extend(["**Подкаталоги**", ""])
-        for child in children:
-            child_relative = child.relative_to(ROOT).as_posix()
-            description = TOP_LEVEL_DESCRIPTIONS.get(child.name, "Материалы раздела")
-            lines.append(f"- [{child.name}]({relative_url(child)}) — {description}; `{child_relative}/`")
-        lines.append("")
-
-    if items:
-        lines.extend(["**Файлы**", ""])
-        lines.extend(render_file_table(items))
-        lines.append("")
-
-    if not children and not items:
-        lines.extend(["Каталог пока не содержит материалов.", ""])
-
-    return lines
+def badge(label: str, value: str | int, color: str) -> str:
+    # Shields treats doubled underscores and hyphens as literal characters.
+    def encode(value: str | int) -> str:
+        return quote(str(value).replace('_', '__').replace('-', '--'), safe='')
+    url = f'https://img.shields.io/badge/{encode(label)}-{encode(value)}-{color}?style=flat-square'
+    return f'  <img src="{url}" alt="{html.escape(f"{label}: {value}", quote=True)}">'
 
 
 def generate() -> str:
-    directory_count, file_count, document_count = count_repository()
-    top_level = [
-        path
-        for path in subdirectories_in(ROOT)
-        if path.name not in {"scripts", ".github"}
-    ]
-
+    directions = [ROOT / name for name in DIRECTIONS if (ROOT / name).is_dir()]
+    all_documents = [p for direction in directions for p in documents(direction)]
+    lectures = sum(len(documents(d / 'Лекции')) for d in directions)
+    practices = sum(len(documents(d / 'Практики')) for d in directions)
     lines = [
-        "# Операционные системы",
-        "",
-        "Учебно-методические материалы по дисциплине **«Операционные системы»**: лекции, практические и контрольные работы, рабочие программы и фонды оценочных средств.",
-        "",
-        "> Этот файл формируется автоматически из текущей структуры репозитория. Не редактируйте его вручную: изменения будут заменены при следующем запуске генератора.",
-        "",
-        "## Направления подготовки",
-        "",
-        "| Каталог | Направление |",
-        "|---|---|",
+        '<!-- Generated by scripts/generate_readme.py. Edit the generator, not this file. -->',
+        '', '<div align="center">', '', '# Операционные системы', '',
+        '**Устройство ОС · системное программирование · компьютерная безопасность**', '',
+        'Учебные материалы для студентов: от знакомства с операционной системой',
+        'до практической работы с процессами, памятью и механизмами защиты.', '',
+        '<p>', badge('Направления', len(directions), '6366f1'),
+        badge('Лекции', lectures, '2563eb'), badge('Практики', practices, '0891b2'),
+        badge('Материалы', len(all_documents), '475569'), '</p>', '',
+        '[Выбрать направление](#направления-подготовки) · [Открыть материалы](#каталог-материалов) · [Начать работу](#как-пользоваться)',
+        '', '</div>', '', '---', '', '## Направления подготовки', '',
+        'Выберите своё направление — ссылки ведут непосредственно в нужный раздел.', '',
+        '| Направление | Лекции | Практики | Контрольные работы | РПД и ФОС |',
+        '| :--- | :---: | :---: | :---: | :---: |',
     ]
+    for direction in directions:
+        cells = [f'**[{direction.name}]({relative_url(direction)})**<br>{DIRECTIONS[direction.name]}']
+        for section in SECTIONS:
+            folder = direction / section
+            count = len(documents(folder))
+            cells.append(f'[Открыть · {count}]({relative_url(folder)})' if count else '—')
+        lines.append('| ' + ' | '.join(cells) + ' |')
+    lines += ['', '*Числа показывают количество опубликованных материалов; «—» означает, что раздел пока не заполнен.*',
+              '', '## Как пользоваться', '',
+              '1. **Выберите направление** в таблице выше.',
+              '2. **Изучите лекцию** и откройте соответствующую практическую работу.',
+              '3. **Подготовьте учебный стенд** по инструкции к первой практической работе своего направления.',
+              '4. **Выполните задания и оформите отчёт** по требованиям конкретной работы.', '',
+              'Материалы в Markdown можно читать прямо на GitHub. Для работы без интернета скачайте репозиторий через **Code → Download ZIP**.',
+              '', '## Каталог материалов', '',
+              'Список автоматически обновляется при добавлении, переименовании и удалении учебных файлов.', '']
+    for direction in directions:
+        lines += [f'### {direction.name} · {DIRECTIONS[direction.name]}', '']
+        items = documents(direction)
+        if not items:
+            lines += ['Материалы этого направления пока не опубликованы.', '']
+            continue
+        grouped = set()
+        for section, icon in SECTIONS.items():
+            files = documents(direction / section)
+            grouped.update(files)
+            if files:
+                lines += render_catalog(f'{icon} {section}', files)
+        other = [p for p in items if p not in grouped]
+        if other:
+            lines += render_catalog('📎 Дополнительные материалы', other)
+    lines += ['---', '', '<details>', '<summary><b>⚙️ Автоматическое обновление README</b></summary>', '',
+              'GitHub Actions запускает генератор после изменений в ветке `main`. '
+              'Названия берутся из заголовков Markdown, остальные файлы отображаются по имени. '
+              'Изображения, служебные файлы и вложенные README не включаются в каталог и счётчики.', '',
+              'Чтобы изменить оформление этой страницы, редактируйте [`scripts/generate_readme.py`](./scripts/generate_readme.py). '
+              'Ручные правки `readme.md` будут заменены при следующей генерации.', '',
+              'Обновить страницу локально:', '', '```bash', 'python scripts/generate_readme.py', '```', '',
+              'Проверить актуальность:', '', '```bash', 'python scripts/generate_readme.py --check', '```', '',
+              'Workflow: [update-readme.yml](./.github/workflows/update-readme.yml).', '', '</details>', '']
+    return '\n'.join(lines)
 
-    for path in top_level:
-        description = TOP_LEVEL_DESCRIPTIONS.get(path.name, "Материалы курса")
-        lines.append(f"| [{path.name}]({relative_url(path)}) | {description} |")
 
-    lines.extend(
-        [
-            "",
-            "## Состав репозитория",
-            "",
-            f"- каталогов: **{directory_count}**;",
-            f"- файлов: **{file_count}**;",
-            f"- учебных документов: **{document_count}**.",
-            "",
-            "## Структура каталогов",
-            "",
-            "```text",
-            "Operating_System/",
-        ]
-    )
-    lines.extend(tree_lines(ROOT))
-    lines.extend(["```", "", "## Содержание каталогов", ""])
-
-    for directory in directories():
-        lines.extend(render_directory_section(directory))
-
-    lines.extend(
-        [
-            "## Как обновляется этот файл",
-            "",
-            "После изменения содержимого ветки `main` GitHub Actions запускает `scripts/generate_readme.py`. Если структура или набор файлов изменились, workflow создаёт новый `readme.md` и фиксирует его отдельным коммитом.",
-            "",
-            "Локальная генерация:",
-            "",
-            "```bash",
-            "python scripts/generate_readme.py",
-            "```",
-            "",
-            "Проверка актуальности без изменения файла:",
-            "",
-            "```bash",
-            "python scripts/generate_readme.py --check",
-            "```",
-            "",
-            "## Правила безопасной работы",
-            "",
-            "> Все действия по настройке, диагностике и проверке безопасности выполняются только в разрешённой учебной среде. Воздействие на сторонние системы и сети запрещено.",
-            "",
-        ]
-    )
-    return "\n".join(lines)
+def render_catalog(label: str, files: list[Path]) -> list[str]:
+    lines = ['<details open>', f'<summary><b>{label}</b> · {len(files)}</summary>', '',
+             '| Материал | Формат |', '| :--- | :---: |']
+    for path in files:
+        lines.append(f'| [{escape(title(path))}]({relative_url(path)}) | {FORMATS[path.suffix.lower()]} |')
+    return lines + ['', '</details>', '']
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--check",
-        action="store_true",
-        help="return a non-zero status when readme.md is out of date",
-    )
+    parser.add_argument('--check', action='store_true', help='check freshness without writing')
     args = parser.parse_args()
-
     generated = generate()
-    current = OUTPUT.read_text(encoding="utf-8") if OUTPUT.exists() else ""
-
+    current = OUTPUT.read_text(encoding='utf-8') if OUTPUT.exists() else ''
     if args.check:
-        if current == generated:
-            print("readme.md is up to date")
-            return 0
-        print("readme.md is out of date", file=sys.stderr)
-        return 1
-
-    if current == generated:
-        print("readme.md is already up to date")
-        return 0
-
-    OUTPUT.write_text(generated, encoding="utf-8", newline="\n")
-    print("readme.md updated")
+        fresh = current == generated
+        print('readme.md is up to date' if fresh else 'readme.md is out of date',
+              file=sys.stdout if fresh else sys.stderr)
+        return 0 if fresh else 1
+    if current != generated:
+        OUTPUT.write_text(generated, encoding='utf-8', newline='\n')
+        print('readme.md updated')
+    else:
+        print('readme.md is already up to date')
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())
