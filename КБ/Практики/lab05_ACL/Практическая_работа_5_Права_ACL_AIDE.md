@@ -753,10 +753,11 @@ sha256sum -c SHA256SUMS | tee sha256_check.txt
 
 ## 14. Источники
 
-1. [Astra Linux. Дискреционное управление доступом](https://docs.astralinux.ru/latest/szi/szi/dac/).
-2. [Astra Linux. Списки управления доступом к файловым объектам](https://wiki.astralinux.ru/pages/viewpage.action?pageId=137567873).
-3. [Astra Linux. Средства контроля целостности в ОС](https://wiki.astralinux.ru/kb/sredstva-kontrolya-tselostnosti-v-os-190914430.html).
-4. [Debian Manpages. getfacl(1)](https://manpages.debian.org/bookworm/acl/getfacl.1.en.html).
-5. [Debian Manpages. setfacl(1)](https://manpages.debian.org/bookworm/acl/setfacl.1.en.html).
-6. [Debian Manpages. aide(1)](https://manpages.debian.org/bookworm/aide/aide.1.en.html).
-7. [Debian Manpages. aide.conf(5)](https://manpages.debian.org/bookworm/aide/aide.conf.5.en.html).
+1. [Astra Linux. Модуль 9. Работа с правами доступа, ACL] (https://www.aldpro.ru/professional/ALSE_Module_09/ACL_access_rights.html)
+2. [Astra Linux. Дискреционное управление доступом](https://docs.astralinux.ru/latest/szi/szi/dac/).
+3. [Astra Linux. Списки управления доступом к файловым объектам](https://wiki.astralinux.ru/pages/viewpage.action?pageId=137567873).
+4. [Astra Linux. Средства контроля целостности в ОС](https://wiki.astralinux.ru/kb/sredstva-kontrolya-tselostnosti-v-os-190914430.html).
+5. [Debian Manpages. getfacl(1)](https://manpages.debian.org/bookworm/acl/getfacl.1.en.html).
+6. [Debian Manpages. setfacl(1)](https://manpages.debian.org/bookworm/acl/setfacl.1.en.html).
+7. [Debian Manpages. aide(1)](https://manpages.debian.org/bookworm/aide/aide.1.en.html).
+8. [Debian Manpages. aide.conf(5)](https://manpages.debian.org/bookworm/aide/aide.conf.5.en.html).
