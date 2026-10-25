@@ -13,8 +13,8 @@ if not 1 <= a.port <= 65535:
     p.error('port must be 1..65535')
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
     s.settimeout(2)
-    s.connect((a.host, a.port))
     try:
+        s.connect((a.host, a.port))
         s.send(b'PR8?')
         print(s.recv(1024).decode('utf-8', errors='replace'), end='')
     except socket.timeout:
