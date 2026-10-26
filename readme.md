@@ -11,9 +11,9 @@
 
 <p>
   <img src="https://img.shields.io/badge/%D0%9D%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-3-6366f1?style=flat-square" alt="Направления: 3">
-  <img src="https://img.shields.io/badge/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8-11-2563eb?style=flat-square" alt="Лекции: 11">
-  <img src="https://img.shields.io/badge/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-19-0891b2?style=flat-square" alt="Практики: 19">
-  <img src="https://img.shields.io/badge/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B-31-475569?style=flat-square" alt="Материалы: 31">
+  <img src="https://img.shields.io/badge/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8-16-2563eb?style=flat-square" alt="Лекции: 16">
+  <img src="https://img.shields.io/badge/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-23-0891b2?style=flat-square" alt="Практики: 23">
+  <img src="https://img.shields.io/badge/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B-40-475569?style=flat-square" alt="Материалы: 40">
 </p>
 
 [Выбрать направление](#направления-подготовки) · [Открыть материалы](#каталог-материалов) · [Начать работу](#как-пользоваться)
@@ -28,7 +28,7 @@
 
 | Направление | Лекции | Практики | Контрольные работы | РПД и ФОС |
 | :--- | :---: | :---: | :---: | :---: |
-| **[КБ](./%D0%9A%D0%91)**<br>10.05.01 «Компьютерная безопасность» | [Открыть · 11](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8) | [Открыть · 19](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8) | — | [Открыть · 1](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1) |
+| **[КБ](./%D0%9A%D0%91)**<br>10.05.01 «Компьютерная безопасность» | [Открыть · 16](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8) | [Открыть · 23](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8) | — | [Открыть · 1](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1) |
 | **[ИВТ](./%D0%98%D0%92%D0%A2)**<br>09.03.01 «Информатика и вычислительная техника» | — | — | — | — |
 | **[ПИ](./%D0%9F%D0%98)**<br>09.03.04 «Программная инженерия» | — | — | — | — |
 
@@ -50,7 +50,7 @@
 ### КБ · 10.05.01 «Компьютерная безопасность»
 
 <details open>
-<summary><b>📖 Лекции</b> · 11</summary>
+<summary><b>📖 Лекции</b> · 16</summary>
 
 | Материал | Формат |
 | :--- | :---: |
@@ -63,13 +63,18 @@
 | [Лекция 7. Ввод-вывод, устройства и драйверы](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_7_%D0%92%D0%B2%D0%BE%D0%B4_%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0_%D0%B8_%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D1%8B/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_7_%D0%92%D0%B2%D0%BE%D0%B4_%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4_%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0_%D0%B8_%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D1%8B.md) | Markdown |
 | [Лекция 8. Пользователи, группы и аутентификация](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_8_%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B_%D0%B8_%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_8_%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B_%D0%B8_%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F.md) | Markdown |
 | [Лекция 9. Модели разграничения доступа](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_9_%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%20%D1%80%D0%B0%D0%B7%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_9_%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8_%D1%80%D0%B0%D0%B7%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0.md) | Markdown |
+| [Лекция 10. Архитектура безопасности Astra Linux](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux/README_%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_10.md) | Markdown |
+| [SHA256SUMS](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux/SHA256SUMS.txt) | Текст |
+| [Источники, соответствие РПД и состояние комплекта](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_%D0%B8_%D1%81%D0%BE%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B8%D0%B5_%D0%A0%D0%9F%D0%94.md) | Markdown |
 | [Лекция 10. Архитектура безопасности Astra Linux](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux.md) | Markdown |
+| [Лекция 10 Архитектура безопасности Astra Linux презентация](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux_%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pptx) | PowerPoint |
+| [Состав готовой презентации лекции 10](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/lecture_10_%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8_Astra_Linux/%D0%A1%D0%BE%D1%81%D1%82%D0%B0%D0%B2_%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8_%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8_10.md) | Markdown |
 | [Операционные системы](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/OS-lecture-notes.md) | Markdown |
 
 </details>
 
 <details open>
-<summary><b>🧪 Практики</b> · 19</summary>
+<summary><b>🧪 Практики</b> · 23</summary>
 
 | Материал | Формат |
 | :--- | :---: |
@@ -92,6 +97,10 @@
 | [Проверка и адаптация ПР8 для предоставленного образа «Орёл»](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab08/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D0%9F%D0%A08_%D0%9E%D1%80%D0%B5%D0%BB_2026-10-25.md) | Markdown |
 | [Практическая работа № 9. Учебная модель мандатного доступа в Astra Linux «Орёл»](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab09/Lab09.md) | Markdown |
 | [Индивидуальные варианты практической № 9](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab09/%D0%92%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B.md) | Markdown |
+| [Практическая работа № 10. Журналирование действий и корреляция событий](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab10/Lab10.md) | Markdown |
+| [Практическая работа № 1. Изолированный виртуальный стенд и паспорт операционной системы](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab10/reference/Lab1.md) | Markdown |
+| [SHA256SUMS](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab10/SHA256SUMS.txt) | Текст |
+| [Проверка выполнимости ПР10 на предоставленном «Орле»](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8/lab10/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D0%9F%D0%A010_%D0%9E%D1%80%D0%B5%D0%BB_2026-10-26.md) | Markdown |
 
 </details>
 
