@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/%D0%9D%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-3-6366f1?style=flat-square" alt="Направления: 3">
   <img src="https://img.shields.io/badge/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8-16-2563eb?style=flat-square" alt="Лекции: 16">
   <img src="https://img.shields.io/badge/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-23-0891b2?style=flat-square" alt="Практики: 23">
-  <img src="https://img.shields.io/badge/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B-40-475569?style=flat-square" alt="Материалы: 40">
+  <img src="https://img.shields.io/badge/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B-41-475569?style=flat-square" alt="Материалы: 41">
 </p>
 
 [Выбрать направление](#направления-подготовки) · [Открыть материалы](#каталог-материалов) · [Начать работу](#как-пользоваться)
@@ -28,7 +28,7 @@
 
 | Направление | Лекции | Практики | Контрольные работы | РПД и ФОС |
 | :--- | :---: | :---: | :---: | :---: |
-| **[КБ](./%D0%9A%D0%91)**<br>10.05.01 «Компьютерная безопасность» | [Открыть · 16](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8) | [Открыть · 23](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8) | — | [Открыть · 1](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1) |
+| **[КБ](./%D0%9A%D0%91)**<br>10.05.01 «Компьютерная безопасность» | [Открыть · 16](./%D0%9A%D0%91/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8) | [Открыть · 23](./%D0%9A%D0%91/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8) | — | [Открыть · 2](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1) |
 | **[ИВТ](./%D0%98%D0%92%D0%A2)**<br>09.03.01 «Информатика и вычислительная техника» | — | — | — | — |
 | **[ПИ](./%D0%9F%D0%98)**<br>09.03.04 «Программная инженерия» | — | — | — | — |
 
@@ -105,11 +105,12 @@
 </details>
 
 <details open>
-<summary><b>📋 РПД и ФОС</b> · 1</summary>
+<summary><b>📋 РПД и ФОС</b> · 2</summary>
 
 | Материал | Формат |
 | :--- | :---: |
-| [ПАСПОРТ РАБОЧЕЙ ПРОГРАММЫ](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1/RPD_Operatsionnye_sistemy_10.05.01.md) | Markdown |
+| [FOS Operating Systems](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1/FOS_Operating_Systems.md) | Markdown |
+| [RPD Operating Systems](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1/RPD_Operating_Systems.md) | Markdown |
 
 </details>
 
