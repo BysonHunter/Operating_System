@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: OS Lab
+Label: Unknown hotfix
+Suite: orel-hotfix
+Codename: orel-hotfix
+Date: Sat, 01 Nov 2025 09:00:00 +0000
+Architectures: amd64
+Components: main
+Description: teaching repository of practical work 11
+MD5Sum:
+ 1f44e17c2f1de73505eca1e942157156      557 main/binary-amd64/Packages
+ 9d53b4c0f2ffd825217fafa0c1fa02df      426 main/binary-amd64/Packages.gz
+SHA256:
+ 0d20ccf6ab186ce619ff56a421b86b3915b87d9252b48491a18ee663369a8a6a      557 main/binary-amd64/Packages
+ be645d3f5aff21e4a91a98ee56d69399e59f0c7ae76730b626cb9f336c856f55      426 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEEtFUW1Tdt7gR7S3G05B0ZUJy6g14FAmrvLbUACgkQ5B0ZUJy6
+g162awv8DrplLSndTRcyVGecsAKSfGI6NoJ/vq0zOrcIEaB69f4uLOBQ+jqv/s0R
+9+Hug5PITeT6eyHnbdAei3OS0o55BhQAQ4yHd7NhupgBo4OOzJLD7988F6AMJgZx
+dCKooz3r2/m2fCMw/dJhgSdjGwoFBgmQlEOU4qyQl/ThzrCIW7ZwlKohcLzO9Op6
+9AGSmjHjAzHkMUOzmxZ1xthxERSqJr+lVeisa6MNQG8zyKSNNjDQx1eZSVDtL3I0
+aPx48lC/ynV6maXZeJrGYwQZuTAkIDkFlL5r46UtWLa1RuW7JnCah38wFOCeEFOp
+10HuuEGUOC+WggLBYCi5Pp8aO0X90X3uxROUsTSRkhX4AGy8aGpkl7tc3ldTIV3A
+KyVKY5LL8jaOyex+Je0VfhV04pKLffBWQYaBCQk26oW0+gQlGfFDUcKYTRqbm2wq
+OKhLPNAURc/NlcWrtu40sjCOdr6/8zReZ8gsA/4Fr7yfO7YPRHfqYZCCDdrVTlJh
+JZtiTDcn
+=oVU4
+-----END PGP SIGNATURE-----

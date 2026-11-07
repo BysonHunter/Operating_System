@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: OS Lab
+Label: OS Lab trusted
+Suite: orel-lab
+Codename: orel-lab
+Date: Sat, 01 Nov 2025 09:00:00 +0000
+Architectures: amd64
+Components: main
+Description: teaching repository of practical work 11
+MD5Sum:
+ 50859741938d6cde9ac8b889309ed939     1671 main/binary-amd64/Packages
+ aaa5ef8650e160a2d52abeaf3514d39e      644 main/binary-amd64/Packages.gz
+SHA256:
+ 43004cd2dfc35e60f5be7c317d8165247198ca74e3dc42ea06e4eb163907c0fc     1671 main/binary-amd64/Packages
+ 8a2680bd9ca2fb5de055d0779ba7d91aab70a4379017c924544264ecd8ea7dc4      644 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEEXf6IiV8MeTJZfmtNdw+qH7//k74FAmrvLbUACgkQdw+qH7//
+k77+/Av/f0lvJWCBSl6RJC3LHVnTUK8lIOsf2/N/Ne+55zAwzlFNyQtECb7sRAtM
+OLxHLS1rYOcQdROlWBduYpb0lkABN1S6htfFsG4459uc5aa6OihPQxQeHr+qIWXw
+71fmQFd3K9Izkn/gkhXO5p4wz9iftL2H10maUD+ZY/bm7NDdv9fmOSeUR+PFQIA5
+LKODQD8NwLoYGCMXspOX8CU1CBAzwnOR/hul3uwvWT1cKgVQccCFV9G/ZnhKTYcX
+20JsYXlOUSgYAoeR3obDI8SDwEVi2/sK5xunEq/dAmClTY19O03GZMD9DeKsbo2o
+Or5Yqo0M112FCH3TKo9Ib4Sjr2pDTIJO0aslicP7lqV0y4iJrg8luEZiv+odjZtE
+8Yr7C6eT3xATybcFJD1Jd2oO+Iw9L0POLFiiUG2Ew7uTZVHaWkWRfJ2iv0ErqKoi
+RVT3bwBk9I41NO09cpHD0Z48oqKWpxYd2KLew8IpM6V6KNNS0+ZbBa/WGrg5y0P1
+CqR1wUIF
+=OGaH
+-----END PGP SIGNATURE-----

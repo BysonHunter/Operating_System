@@ -1,0 +1,14 @@
+Origin: OS Lab
+Label: Unknown hotfix
+Suite: orel-hotfix
+Codename: orel-hotfix
+Date: Sat, 01 Nov 2025 09:00:00 +0000
+Architectures: amd64
+Components: main
+Description: teaching repository of practical work 11
+MD5Sum:
+ 1f44e17c2f1de73505eca1e942157156      557 main/binary-amd64/Packages
+ 9d53b4c0f2ffd825217fafa0c1fa02df      426 main/binary-amd64/Packages.gz
+SHA256:
+ 0d20ccf6ab186ce619ff56a421b86b3915b87d9252b48491a18ee663369a8a6a      557 main/binary-amd64/Packages
+ be645d3f5aff21e4a91a98ee56d69399e59f0c7ae76730b626cb9f336c856f55      426 main/binary-amd64/Packages.gz

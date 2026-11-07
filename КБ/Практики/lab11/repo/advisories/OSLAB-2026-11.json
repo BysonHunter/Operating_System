@@ -1,0 +1,42 @@
+{
+  "bulletin": "OSLAB-2026-11",
+  "publisher": "OS Lab Teaching Archive",
+  "note": "Учебный бюллетень для практической работы 11. Это не CVE и не сведения о реальном продукте.",
+  "package": "pr11-demo",
+  "published": "2025-11-01",
+  "advisories": [
+    {
+      "id": "OSLAB-2026-1101",
+      "title": "Отладочный адрес /debug раскрывает конфигурацию службы",
+      "affected_upstream": ["1.0"],
+      "affected_versions": ["1.0-1"],
+      "fixed_versions": ["1.0-2", "1.1-1"],
+      "condition": "debug = on (значение по умолчанию в 1.0-1)",
+      "remote_check": "GET /debug возвращает 200 и объект config",
+      "local_check": "версия работающего процесса и debug_active в runtime.json",
+      "remediation": "обновить до 1.0-2 или 1.1-1 и перезапустить службу"
+    },
+    {
+      "id": "OSLAB-2026-1102",
+      "title": "Учебный токен в общедоступном конфигурационном файле",
+      "affected_upstream": ["1.0"],
+      "affected_versions": ["1.0-1"],
+      "fixed_versions": ["1.0-2", "1.1-1"],
+      "condition": "/etc/pr11-demo/pr11-demo.conf читается всеми и содержит ключ token",
+      "remote_check": null,
+      "local_check": "права файла и наличие ключа token (значение не выводится)",
+      "remediation": "обновить пакет; неизменённый conffile заменяется при обновлении"
+    },
+    {
+      "id": "OSLAB-2026-1104",
+      "title": "Приём файлов без проверки при upload = on",
+      "affected_upstream": ["1.1"],
+      "affected_versions": ["1.1-1"],
+      "fixed_versions": [],
+      "condition": "upload = on (по умолчанию off)",
+      "remote_check": null,
+      "local_check": "значение upload в конфигурации и upload_active в runtime.json",
+      "remediation": "оставить upload = off; исправленной версии нет"
+    }
+  ]
+}

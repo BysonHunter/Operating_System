@@ -1,0 +1,48 @@
+Package: pr11-demo
+Version: 1.0-1
+Architecture: all
+Maintainer: OS Lab Teaching Archive <oslab@example.invalid>
+Installed-Size: 5
+Depends: python3 (>= 3.5)
+Filename: pool/main/p/pr11-demo/pr11-demo_1.0-1_all.deb
+Size: 3426
+MD5sum: 8ecfdaef627177ac3fbc0b6125788199
+SHA1: bdeec06fe4cea35fbcd031d6e7bdbaeadbf5cf4e
+SHA256: d0e1ac63cfc5d4758dd6268a44821a08a5e4b9981c141402cabd98b4050684e7
+Section: misc
+Priority: optional
+Description: teaching HTTP service for OS practical work 11
+ Bounded service with artificial findings OSLAB-2026-11xx. Not a real product.
+
+Package: pr11-demo
+Version: 1.0-2
+Architecture: all
+Maintainer: OS Lab Teaching Archive <oslab@example.invalid>
+Installed-Size: 5
+Depends: python3 (>= 3.5)
+Filename: pool/main/p/pr11-demo/pr11-demo_1.0-2_all.deb
+Size: 3558
+MD5sum: 50e2c68be03faea815d913bc4fc4f986
+SHA1: 58a0eee13995ec7e7d8d44dd0c3814a1c3be3cab
+SHA256: c758b8e2827670be25b1d85ede1c760f03bf6f87da91fb9db7792b99d10b538e
+Section: misc
+Priority: optional
+Description: teaching HTTP service for OS practical work 11
+ Bounded service with artificial findings OSLAB-2026-11xx. Not a real product.
+
+Package: pr11-demo
+Version: 1.1-1
+Architecture: all
+Maintainer: OS Lab Teaching Archive <oslab@example.invalid>
+Installed-Size: 5
+Depends: python3 (>= 3.5)
+Filename: pool/main/p/pr11-demo/pr11-demo_1.1-1_all.deb
+Size: 3534
+MD5sum: 7ff2758855596454d4d9a418628c88f3
+SHA1: 94bbd932ae5d469079beb7580d38fbce2ab5b551
+SHA256: 7a26e9e0cfd7d555c47f20480f7f6a36249147108b5c7fd7ccfa69837a5e9564
+Section: misc
+Priority: optional
+Description: teaching HTTP service for OS practical work 11
+ Bounded service with artificial findings OSLAB-2026-11xx. Not a real product.
+

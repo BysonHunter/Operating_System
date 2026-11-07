@@ -1,0 +1,16 @@
+Package: pr11-demo
+Version: 9.9-1
+Architecture: all
+Maintainer: OS Lab Teaching Archive <oslab@example.invalid>
+Installed-Size: 5
+Depends: python3 (>= 3.5)
+Filename: pool/main/p/pr11-demo/pr11-demo_9.9-1_all.deb
+Size: 3352
+MD5sum: 28e5d6a8f6b7e118664c4d667431aa57
+SHA1: 916ee8b379bee1210eed6c0660252fc0ade08ca4
+SHA256: 9314566207a7f4d17887c10ea719e8aa24270e9c17395e44b7b8df129c79d206
+Section: misc
+Priority: optional
+Description: teaching HTTP service for OS practical work 11
+ Bounded service with artificial findings OSLAB-2026-11xx. Not a real product.
+
