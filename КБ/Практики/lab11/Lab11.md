@@ -127,7 +127,7 @@ ip -6 route
 
 **Версия пакета Debian/Astra** имеет вид `upstream-revision`, например `1.0-2`. Поставщик часто переносит исправление в старую ветку (бэкпорт): upstream остаётся 1.0, меняется только ревизия. Баннер `PR11Demo/1.0` не различает 1.0-1 и 1.0-2, поэтому сканер по версии даёт ложное срабатывание после исправления. Решение принимают по локальной версии (`dpkg-query`), changelog пакета и фактическому поведению.
 
-**Цепочка доверия APT.** Ключ архива проверяет подпись InRelease (или Release.gpg для Release). В Release записаны SHA256 и размеры индексов Packages. В Packages записаны SHA256 и размеры файлов .deb. Если любое звено не совпадает, пакет не считается доверенным. Опция `signed-by` в строке источника ограничивает доверие одним ключом и одним источником; ключ не добавляется в общее хранилище `/etc/apt/trusted.gpg.d`. Опции `trusted=yes`, `--allow-unauthenticated` и `AllowInsecureRepositories` отключают эту защиту и в работе запрещены. Отпечаток ключа сверяется по независимому каналу — здесь по тексту задания:
+**Цепочка доверия APT.** Ключ архива проверяет подпись InRelease (или Release.gpg для Release). В Release записаны SHA256 и размеры индексов Packages. В Packages записаны SHA256 и размеры файлов .deb. Если любое звено не совпадает, пакет не считается доверенным. Опция `signed-by` в строке источника ограничивает доверие одним ключом и одним источником; ключ не добавляется в общее хранилище `/etc/apt/trusted.gpg.d`. Опции `trusted=yes`, `--allow-unauthenticated` и `AllowInsecureRepositories=true` отключают эту защиту и в работе запрещены. В APT 1.4 apt-get в переходный период по умолчанию только предупреждает о неподписанном источнике, а установку его пакетов требует подтвердить; поэтому в работе отказ задаётся явно ключом `--no-allow-insecure-repositories`. Отпечаток ключа сверяется по независимому каналу — здесь по тексту задания:
 
 ```text
 Учебный ключ архива OS Lab: 5DFE 8889 5F0C 7932 597E  6B4D 770F AA1F BFFF 93BE
@@ -271,11 +271,11 @@ apt-cache $APT_LAB policy pr11-demo | tee evidence/policy-initial.txt
 ```bash
 python3 "$T" repo-verify --repo /srv/oslab11/untrusted --suite orel-hotfix --output evidence/repo-hotfix.json; echo "repo-verify code=$?"
 cat "$W/apt/hotfix.list"
-sudo apt-get -o Dir::Etc::SourceList="$W/apt/hotfix.list" -o Dir::Etc::SourceParts=- -o APT::Get::List-Cleanup=0 update 2>&1 | tee evidence/apt-update-hotfix.txt
+sudo apt-get --no-allow-insecure-repositories -o Dir::Etc::SourceList="$W/apt/hotfix.list" -o Dir::Etc::SourceParts=- -o APT::Get::List-Cleanup=0 update 2>&1 | tee evidence/apt-update-hotfix.txt
 apt-cache -o Dir::Etc::SourceList="$W/apt/hotfix.list" -o Dir::Etc::SourceParts=- policy pr11-demo | tee evidence/policy-hotfix.txt
 ```
 
-Ожидание: repo-verify показывает FAIL для подписей, хотя хеши индексов и пакета совпадают, и завершается с кодом 3. APT сообщает NO_PUBKEY E41D19509CBA835E и ошибку «repository … is not signed», код 100. Версия 9.9-1 не становится кандидатом. Объясните, почему совпадение хешей не делает источник доверенным. **Не** добавляйте посторонний ключ, `trusted=yes` или `--allow-unauthenticated`: это и есть атака на цепочку поставок.
+Ожидание: repo-verify показывает FAIL для подписей, хотя хеши индексов и пакета совпадают, и завершается с кодом 3. APT сообщает NO_PUBKEY E41D19509CBA835E и ошибку «repository … is not signed», код 100. Версия 9.9-1 не становится кандидатом. Ключ `--no-allow-insecure-repositories` обязателен: в APT 1.4 команда apt-get в переходный период по умолчанию лишь предупреждает о непроверенном источнике (команда apt — отказывает), а установка пакета из него требует явного подтверждения. В новых версиях APT отказ действует по умолчанию. Ключ делает поведение одинаковым на любой версии; запишите это в отчёт. Объясните, почему совпадение хешей не делает источник доверенным. **Не** добавляйте посторонний ключ, `trusted=yes` или `--allow-unauthenticated`: это и есть атака на цепочку поставок.
 
 ### Шаг 3. Исходное состояние и сканирование — 15 минут
 
@@ -504,6 +504,7 @@ sha256sum -c SHA256SUMS.txt
 | apt: NO_PUBKEY для orel-lab | Путь и права keyring в `/srv/oslab11/keys`; строку signed-by в apt/oslab11.list |
 | apt: «Download is performed unsandboxed as root» | Права чтения `/srv/oslab11` для всех (`chmod -R a+rX`); предупреждение не отменяет проверку подписи |
 | apt не понимает signed-by | Версию APT (нужна 1.1 и выше; на «Орле» 1.4); при иной системе — к преподавателю, не добавлять ключ в trusted.gpg.d самостоятельно |
+| Источник 9.9-1 дал только предупреждение (W:), а не ошибку | Не указан `--no-allow-insecure-repositories`: в APT 1.4 apt-get в переходный период только предупреждает; повторить с ключом; ничего не устанавливать из этого источника |
 | apt update пишет ошибки других источников | Должен использоваться APT_LAB; без него APT обращается к штатным источникам |
 | Unable to locate package / нет версии | Выполнен ли update с APT_LAB; та же переменная в install/download/policy |
 | Моделирование предлагает Remv | Остановиться; проверить зависимости и источник; не подтверждать удаление |
