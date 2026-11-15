@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/%D0%9D%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-3-6366f1?style=flat-square" alt="Направления: 3">
   <img src="https://img.shields.io/badge/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8-22-2563eb?style=flat-square" alt="Лекции: 22">
   <img src="https://img.shields.io/badge/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-31-0891b2?style=flat-square" alt="Практики: 31">
-  <img src="https://img.shields.io/badge/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B-55-475569?style=flat-square" alt="Материалы: 55">
+  <img src="https://img.shields.io/badge/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B-57-475569?style=flat-square" alt="Материалы: 57">
 </p>
 
 [Выбрать направление](#направления-подготовки) · [Открыть материалы](#каталог-материалов) · [Начать работу](#как-пользоваться)
@@ -125,6 +125,16 @@
 | :--- | :---: |
 | [FOS Operating Systems](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1/FOS_Operating_Systems.md) | Markdown |
 | [RPD Operating Systems](./%D0%9A%D0%91/%D0%A0%D0%9F%D0%94%20%D0%B8%20%D0%A4%D0%9E%D0%A1/RPD_Operating_Systems.md) | Markdown |
+
+</details>
+
+<details open>
+<summary><b>📎 Дополнительные материалы</b> · 2</summary>
+
+| Материал | Формат |
+| :--- | :---: |
+| [Контрольная работа по дисциплине «Операционные системы»](./%D0%9A%D0%91/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B/%D0%9A%D0%A0_%D0%9E%D0%A1_27_%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2.md) | Markdown |
+| [Контрольная работа по операционным системам](./%D0%9A%D0%91/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B/%D0%9A%D0%A0_%D0%9E%D0%A1_%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F.md) | Markdown |
 
 </details>
 
